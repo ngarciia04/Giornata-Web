@@ -54,15 +54,15 @@ export default function ServiceDetail() {
               <div className="rounded-[28px] bg-ink text-bone p-8">
                 <div className="text-[11px] tracking-[0.3em] uppercase text-bone/50">Ficha rápida</div>
                 <div className="mt-4 space-y-3 text-lg">
-                  <div className="flex justify-between border-b border-bone/10 pb-3"><span className="text-bone/55">Plazo</span><span>{s.time}</span></div>
-                  <div className="flex justify-between border-b border-bone/10 pb-3"><span className="text-bone/55">Precio</span><span className="text-ochre">{s.price}</span></div>
-                  <div className="flex justify-between"><span className="text-bone/55">Garantía</span><span>Informe + 2 años</span></div>
+                  <div className="flex justify-between border-b border-bone/10 pb-3"><span className="text-bone/55">Dónde</span><span>En taller e in situ</span></div>
+                  <div className="flex justify-between border-b border-bone/10 pb-3"><span className="text-bone/55">Presupuesto</span><span className="text-ochre">Sin compromiso</span></div>
+                  <div className="flex justify-between"><span className="text-bone/55">Entrega</span><span>Informe documentado</span></div>
                 </div>
                 <div className="mt-6 grid gap-3">
-                  <MagneticButton href="/contacto">Pedir diagnóstico gratis</MagneticButton>
-                  <MagneticButton href="/galeria" tone="ghost">Ver antes / después</MagneticButton>
+                  <MagneticButton href="/contacto">Pedir presupuesto</MagneticButton>
+                  <MagneticButton href="/galeria" tone="ghost">Ver galería</MagneticButton>
                 </div>
-                <p className="mt-4 text-xs text-bone/45">Respuesta en 48h con fotos y medidas.</p>
+                <p className="mt-4 text-xs text-bone/45">Escríbenos y te asesoramos sin compromiso.</p>
               </div>
               <div className="rounded-[28px] bg-bone border border-ink/10 p-8">
                 <div className="text-[11px] tracking-[0.3em] uppercase text-ink/50">Otras disciplinas</div>

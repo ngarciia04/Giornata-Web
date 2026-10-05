@@ -20,8 +20,8 @@ export default function Services() {
           </Reveal>
           <Reveal delay={0.15} className="md:col-span-4">
             <p className="text-bone/65 leading-relaxed">
-              Seis disciplinas, un mismo protocolo de museo: documentación,
-              reversibilidad y materiales nobles. Elige tu pieza, nosotros el método.
+              Nueve disciplinas, una misma exigencia: estudio previo,
+              documentación y máximo respeto por el patrimonio.
             </p>
           </Reveal>
         </div>

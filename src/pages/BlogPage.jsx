@@ -56,19 +56,6 @@ export default function BlogPage() {
             </div>
           </div>
 
-          <Reveal>
-            <div className="mt-12 rounded-[28px] bg-ochre/30 border border-ink/10 p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center gap-6 justify-between">
-              <div>
-                <div className="font-display text-3xl md:text-4xl">Cartas del taller ✦</div>
-                <p className="text-ink/65 mt-1">Un email al mes: antes/después y consejos. Sin spam.</p>
-              </div>
-              <form className="flex w-full md:w-auto gap-2" onSubmit={(e) => e.preventDefault()}>
-                <input required type="email" placeholder="tu@email.com" className="flex-1 md:w-72 rounded-full border border-ink/15 bg-cream px-5 py-3 outline-none focus:border-clay" />
-                <button className="rounded-full bg-ink text-bone px-6 py-3 hover:bg-clay transition-colors">Unirme</button>
-              </form>
-            </div>
-          </Reveal>
-
           <div className="mt-10 flex justify-center">
             <MagneticButton href="/contacto" tone="ghost">¿Tienes una pieza? Escríbenos</MagneticButton>
           </div>

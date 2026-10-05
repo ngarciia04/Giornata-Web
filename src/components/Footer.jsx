@@ -1,6 +1,6 @@
 // FOOTER → Elementor: Footer Template (Theme Builder)
 import { Link } from "react-router-dom";
-import { NAV, SERVICES } from "../data/content";
+import { CONTACT, NAV, SERVICES } from "../data/content";
 
 export default function Footer() {
   return (
@@ -12,15 +12,12 @@ export default function Footer() {
               Giornata<span className="text-clay">.</span>
             </Link>
             <p className="text-bone/55 mt-4 max-w-sm leading-relaxed">
-              Taller de arte y restauración en Valencia desde 1998. Obra
-              pictórica, mueble, dorado y conservación preventiva.
+              Taller de arte y restauración en Logroño desde {CONTACT.since}.
+              Patrimonio religioso, pintura mural, mobiliario y mucho más.
             </p>
-            <div className="flex gap-3 mt-6">
-              {["Instagram", "Pinterest", "TikTok"].map((s) => (
-                <a key={s} href="/" className="text-xs tracking-[0.2em] uppercase border border-bone/20 rounded-full px-4 py-2 hover:bg-bone hover:text-ink transition-colors">
-                  {s}
-                </a>
-              ))}
+            <div className="flex flex-col gap-2 mt-6 text-sm">
+              <a href={`mailto:${CONTACT.email}`} className="text-bone/75 hover:text-bone link-line w-fit">{CONTACT.email}</a>
+              <a href={CONTACT.phoneHref} className="text-bone/75 hover:text-bone link-line w-fit">{CONTACT.phoneFull}</a>
             </div>
           </div>
           <nav className="md:col-span-4 grid grid-cols-2 gap-6 text-sm">
@@ -50,13 +47,13 @@ export default function Footer() {
             </div>
           </nav>
           <div className="md:col-span-3">
-            <div className="text-[11px] tracking-[0.3em] uppercase text-bone/40 mb-4">Horario</div>
+            <div className="text-[11px] tracking-[0.3em] uppercase text-bone/40 mb-4">Dónde estamos</div>
             <p className="text-bone/75 text-sm leading-relaxed">
-              Lun — Vie · 9:00–18:00<br />Visitas con cita.<br />Urgencias para seguros y museos.
+              {CONTACT.address}<br />Taller propio + trabajo in situ.
             </p>
-            <Link to="/contacto" className="inline-flex mt-5 rounded-full bg-bone text-ink px-6 py-3 text-sm hover:bg-ochre transition-colors">
+            <a href={CONTACT.mapsUrl} target="_blank" rel="noreferrer" className="inline-flex mt-5 rounded-full bg-bone text-ink px-6 py-3 text-sm hover:bg-ochre transition-colors">
               Cómo llegar ↗
-            </Link>
+            </a>
           </div>
         </div>
       </div>
@@ -69,7 +66,7 @@ export default function Footer() {
 
       <div className="border-t border-bone/10">
         <div className="max-w-[1400px] mx-auto px-5 md:px-10 py-5 flex flex-col md:flex-row gap-2 items-center justify-between text-xs text-bone/45">
-          <span>© 2026 Giornata Taller de Arte y Restauración — Prototipo React → Elementor</span>
+          <span>© 2025 Giornata – Taller de arte y restauración. Todos los derechos reservados.</span>
           <span className="flex gap-5">
             <Link to="/contacto" className="hover:text-bone">Aviso legal</Link>
             <Link to="/contacto" className="hover:text-bone">Privacidad</Link>

@@ -1,6 +1,6 @@
 // CTA / CONTACTO → Elementor: Section (fondo clay) > 2 col:
 // Col izq: Heading gigante + datos contacto | Col der: Form widget (Name, Email, Select, Textarea, Submit)
-import { IMAGES } from "../data/content";
+import { CONTACT, IMAGES } from "../data/content";
 import { Reveal } from "./ui";
 
 export default function CTA() {
@@ -21,15 +21,15 @@ export default function CTA() {
               ¿Hablamos<br /> de tu <em className="italic">pieza?</em>
             </h2>
             <p className="mt-6 text-cream/80 text-lg max-w-md">
-              Envíanos fotos y medidas. En 48h recibes diagnóstico orientativo
-              y cita en taller. Sin compromiso.
+              Si necesitas asesoramiento o un proyecto de restauración,
+              estaremos encantados de ayudarte. Escríbenos sin compromiso.
             </p>
           </Reveal>
           <Reveal delay={0.12}>
             <ul className="mt-8 space-y-3 text-cream/90">
-              <li className="flex gap-3 items-center"><span className="w-10 h-10 rounded-full bg-cream/15 grid place-items-center">✉</span> hola@giornata-taller.es</li>
-              <li className="flex gap-3 items-center"><span className="w-10 h-10 rounded-full bg-cream/15 grid place-items-center">☎</span> +34 600 123 456 — Lun a Vie, 9–18h</li>
-              <li className="flex gap-3 items-center"><span className="w-10 h-10 rounded-full bg-cream/15 grid place-items-center">◎</span> C/ Corona 12, bajo — 46003 Valencia</li>
+              <li className="flex gap-3 items-center"><span className="w-10 h-10 rounded-full bg-cream/15 grid place-items-center">✉</span> {CONTACT.email}</li>
+              <li className="flex gap-3 items-center"><span className="w-10 h-10 rounded-full bg-cream/15 grid place-items-center">☎</span> {CONTACT.phoneFull}</li>
+              <li className="flex gap-3 items-center"><span className="w-10 h-10 rounded-full bg-cream/15 grid place-items-center">◎</span> {CONTACT.address}</li>
             </ul>
           </Reveal>
         </div>
@@ -45,25 +45,30 @@ export default function CTA() {
                 <input required placeholder="Tu nombre" className="rounded-xl border border-ink/15 bg-white px-4 py-3 outline-none focus:border-clay" />
               </label>
               <label className="grid gap-2 text-sm">
+                <span className="tracking-[0.2em] uppercase text-[11px] text-ink/60">Apellidos</span>
+                <input required placeholder="Tus apellidos" className="rounded-xl border border-ink/15 bg-white px-4 py-3 outline-none focus:border-clay" />
+              </label>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-4 mt-4">
+              <label className="grid gap-2 text-sm">
                 <span className="tracking-[0.2em] uppercase text-[11px] text-ink/60">Email</span>
                 <input required type="email" placeholder="tu@email.com" className="rounded-xl border border-ink/15 bg-white px-4 py-3 outline-none focus:border-clay" />
               </label>
+              <label className="grid gap-2 text-sm">
+                <span className="tracking-[0.2em] uppercase text-[11px] text-ink/60">Teléfono de contacto</span>
+                <input required type="tel" placeholder="600 000 000" className="rounded-xl border border-ink/15 bg-white px-4 py-3 outline-none focus:border-clay" />
+              </label>
             </div>
             <label className="grid gap-2 text-sm mt-4">
-              <span className="tracking-[0.2em] uppercase text-[11px] text-ink/60">Tipo de pieza</span>
-              <select className="rounded-xl border border-ink/15 bg-white px-4 py-3 outline-none focus:border-clay">
-                <option>Cuadro / obra pictórica</option>
-                <option>Mueble / madera</option>
-                <option>Marco dorado / retablo</option>
-                <option>Escultura / papel / otro</option>
-              </select>
+              <span className="tracking-[0.2em] uppercase text-[11px] text-ink/60">Asunto</span>
+              <input placeholder="¿Sobre qué nos escribes?" className="rounded-xl border border-ink/15 bg-white px-4 py-3 outline-none focus:border-clay" />
             </label>
             <label className="grid gap-2 text-sm mt-4">
-              <span className="tracking-[0.2em] uppercase text-[11px] text-ink/60">Cuéntanos</span>
-              <textarea rows={4} placeholder="Medidas, época, daños visibles, fotos…" className="rounded-xl border border-ink/15 bg-white px-4 py-3 outline-none focus:border-clay resize-none" />
+              <span className="tracking-[0.2em] uppercase text-[11px] text-ink/60">Mensaje</span>
+              <textarea rows={4} placeholder="Cuéntanos tu pieza o proyecto…" className="rounded-xl border border-ink/15 bg-white px-4 py-3 outline-none focus:border-clay resize-none" />
             </label>
             <button className="mt-6 w-full rounded-full bg-ink text-bone py-4 font-medium hover:bg-clay transition-colors duration-300">
-              Solicitar diagnóstico gratuito ↗
+              Enviar mensaje ↗
             </button>
             <p className="mt-3 text-xs text-ink/50 text-center">
               Formulario visual de prototipo — en Elementor conecta este Form a tu email / Mailchimp.

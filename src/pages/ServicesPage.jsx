@@ -13,7 +13,7 @@ export default function ServicesPage() {
         tag="Servicios — seis disciplinas"
         title="Elige tu pieza,"
         accent="ponemos el método."
-        desc="Presupuesto cerrado, informe fotográfico y materiales reversibles en las seis disciplinas del taller."
+        desc="Nuestra labor es multidisciplinar: nueve disciplinas con el máximo rigor técnico y respeto por el patrimonio en cada intervención."
         crumbs={["Servicios"]}
         marquee={["pintura", "mueble", "dorado", "papel", "escultura", "preventiva"]}
       />
@@ -34,7 +34,7 @@ export default function ServicesPage() {
                   <div className="md:col-span-8 p-6 md:p-10">
                     <div className="flex items-center gap-4">
                       <span className="font-display italic text-bone/30 text-3xl">{s.n}</span>
-                      <span className="text-[11px] tracking-[0.25em] uppercase text-ochre">{s.price} · {s.time}</span>
+                      <span className="text-[11px] tracking-[0.25em] uppercase text-ochre">{s.tags.join(" · ")}</span>
                     </div>
                     <h2 className="font-display font-light text-4xl md:text-5xl mt-2 group-hover:text-ochre transition-colors">{s.title}</h2>
                     <p className="text-bone/60 mt-3 max-w-2xl leading-relaxed">{s.long}</p>

@@ -20,10 +20,10 @@ export default function Hero() {
         <div className="absolute -top-24 -right-24 w-[520px] h-[520px] rounded-full bg-ochre/25 blur-[120px]" />
         <div className="absolute top-1/3 -left-32 w-[420px] h-[420px] rounded-full bg-clay/15 blur-[120px]" />
         <span className="absolute top-24 left-6 text-[11px] tracking-[0.35em] uppercase text-ink/40 [writing-mode:vertical-lr]">
-          Est. 1998 — Valencia
+          Est. 1997 — Logroño
         </span>
         <span className="absolute top-24 right-6 text-[11px] tracking-[0.35em] uppercase text-ink/40 [writing-mode:vertical-lr]">
-          N.º 047 / Restauración
+          Taller propio + in situ
         </span>
       </div>
 
@@ -36,7 +36,7 @@ export default function Hero() {
           className="flex flex-wrap items-center gap-3 text-[11px] tracking-[0.3em] uppercase text-ink/60"
         >
           <span className="w-2 h-2 rounded-full bg-clay animate-pulse" />
-          Taller de arte & restauración — obra · mueble · dorado
+          Taller de arte & restauración — patrimonio · mural · mueble
         </motion.div>
 
         {/* titular gigante */}
@@ -61,9 +61,9 @@ export default function Hero() {
             transition={{ delay: 0.35, duration: 0.9 }}
             className="md:col-span-4 text-lg md:text-xl leading-snug text-ink/80 max-w-md"
           >
-            Devolvemos la <em className="font-display italic">luz</em> a lo que amas:
-            cuadros, retablos y muebles tratados con criterio de museo y
-            sensibilidad contemporánea.
+            Especialistas en conservación y restauración con más de
+            <em className="font-display italic"> 25 años</em>: policromías,
+            retablos, pintura mural y mobiliario, en taller e in situ.
           </motion.p>
 
           {/* imagen arco */}
@@ -76,8 +76,8 @@ export default function Hero() {
             >
               <img src={IMAGES.heroArch} alt="Detalle de obra pictórica en restauración" className="w-full h-full object-cover" />
               <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between bg-cream/90 backdrop-blur rounded-2xl px-5 py-3 text-sm">
-                <span className="tracking-widest uppercase text-[11px]">Antes / Después — Óleo s. XIX</span>
-                <span className="bg-ink text-bone rounded-full px-3 py-1 text-xs">+142 piezas/año</span>
+                <span className="tracking-widest uppercase text-[11px]">Retablos · Lienzos · Tallas</span>
+                <span className="bg-ink text-bone rounded-full px-3 py-1 text-xs">+25 años de oficio</span>
               </div>
             </motion.div>
 
@@ -92,7 +92,7 @@ export default function Hero() {
                 </defs>
                 <circle cx="50" cy="50" r="50" className="fill-ink" />
                 <text className="fill-bone text-[10.5px] tracking-[0.22em] uppercase">
-                  <textPath href="#circ">· giornata · dal 1998 · arte viva</textPath>
+                  <textPath href="#circ">· giornata · desde 1997 · logroño</textPath>
                 </text>
                 <text x="50" y="60" textAnchor="middle" className="fill-ochre text-2xl">✦</text>
               </svg>
@@ -120,9 +120,9 @@ export default function Hero() {
         {/* stats */}
         <div className="grid grid-cols-3 border-t border-ink/15 py-6 text-center md:text-left">
           {[
-            ["27+", "años de taller"],
-            ["3.4k", "obras devueltas"],
-            ["98%", "clientes que repiten"],
+            ["+25", "años de experiencia"],
+            ["1997", "taller en Logroño"],
+            ["9", "disciplinas de intervención"],
           ].map(([n, l]) => (
             <div key={l} className="px-2">
               <div className="font-display text-4xl md:text-6xl font-light">{n}</div>
@@ -133,7 +133,7 @@ export default function Hero() {
       </div>
 
       <div className="border-t border-ink/15 bg-cream/60">
-        <Marquee items={["restauración pictórica", "mueble antiguo", "pan de oro", "conservación", "peritaje"]} />
+        <Marquee items={["patrimonio religioso", "pintura mural", "retablos y tallas", "mobiliario", "arqueología"]} />
       </div>
     </section>
   );

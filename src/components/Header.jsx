@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { NAV } from "../data/content";
+import { CONTACT, NAV } from "../data/content";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -101,7 +101,7 @@ export default function Header() {
               </motion.div>
             ))}
             <p className="mt-8 text-bone/50 text-sm tracking-widest uppercase">
-              hola@giornata-taller.es · +34 600 123 456
+              {CONTACT.email} · {CONTACT.phoneFull}
             </p>
           </motion.div>
         )}

@@ -44,10 +44,10 @@ export default function BlogPost() {
       <article className="bg-cream py-12 md:py-16">
         <div className="max-w-[760px] mx-auto px-5">
           <div className="flex items-center gap-4 pb-8 border-b border-ink/10">
-            <div className="w-12 h-12 rounded-full bg-ink text-bone grid place-items-center font-display italic text-xl">M</div>
+            <div className="w-12 h-12 rounded-full bg-ink text-bone grid place-items-center font-display italic text-xl">G</div>
             <div>
-              <div className="font-medium">Marta Giornata</div>
-              <div className="text-sm text-ink/55">Restauradora · Taller Giornata</div>
+              <div className="font-medium">giornata</div>
+              <div className="text-sm text-ink/55">Taller de arte y restauración</div>
             </div>
             <span className="ml-auto text-[11px] tracking-[0.25em] uppercase text-ink/45">{post.read} de lectura</span>
           </div>
@@ -60,8 +60,8 @@ export default function BlogPost() {
           ))}
           <Reveal>
             <div className="mt-10 rounded-3xl bg-ink text-bone p-8 flex flex-col sm:flex-row gap-5 items-start sm:items-center justify-between">
-              <div className="font-display text-2xl">¿Tienes un caso parecido? Te lo valoramos gratis.</div>
-              <MagneticButton href="/contacto">Enviar fotos</MagneticButton>
+              <div className="font-display text-2xl">¿Tienes una pieza parecida? Escríbenos sin compromiso.</div>
+              <MagneticButton href="/contacto">Contactar</MagneticButton>
             </div>
           </Reveal>
           <div className="mt-10">

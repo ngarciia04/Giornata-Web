@@ -6,9 +6,9 @@ import { IMAGES } from "../data/content";
 import { Reveal, SectionTag } from "./ui";
 
 const POINTS = [
-  "Informe fotográfico + test de solubilidad incluidos",
-  "Materiales reversibles y compatibles (CTS, Paraloid, goma laca)",
-  "Criterio discernible: nunca falsificamos, siempre documentamos",
+  "Estudio técnico previo y documentación de cada intervención",
+  "Mínima intervención, reversibilidad y respeto por el original",
+  "Máximo rigor técnico y respeto por el patrimonio",
 ];
 
 export default function About() {
@@ -46,10 +46,10 @@ export default function About() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-6 text-lg text-ink/75 leading-relaxed">
-                Somos ebanistas, doradores y restauradores. Trabajamos por
-                <em className="font-display italic"> giornate</em> — jornadas completas
-                dedicadas a una sola pieza — como en el fresco renacentista.
-                Sin prisas, sin atajos, sin brillos plásticos.
+                Somos un equipo de restauradores licenciados en Bellas Artes,
+                especializados en <em className="font-display italic">policromías</em> y
+                en la intervención sobre arqueología, artes decorativas,
+                etnografía y mobiliario. Nuestra labor es multidisciplinar.
               </p>
             </Reveal>
             <ul className="mt-8 space-y-4">
@@ -64,10 +64,10 @@ export default function About() {
             </ul>
             <Reveal delay={0.2}>
               <div className="mt-8 flex items-center gap-5">
-                <div className="w-14 h-14 rounded-full bg-ink text-bone grid place-items-center font-display italic text-2xl">M</div>
+                <div className="w-14 h-14 rounded-full bg-ink text-bone grid place-items-center font-display italic text-2xl">N</div>
                 <div>
-                  <div className="font-medium">Maestra Marta Giornata</div>
-                  <div className="text-sm text-ink/55 tracking-wide">Fundadora · Lic. Bellas Artes, especialidad conservación</div>
+                  <div className="font-medium">Nuria Esteso Cano</div>
+                  <div className="text-sm text-ink/55 tracking-wide">Fundadora · Lic. Bellas Artes, Conservación y Restauración</div>
                 </div>
               </div>
             </Reveal>

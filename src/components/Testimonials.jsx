@@ -1,75 +1,51 @@
-// TESTIMONIALS → Elementor: Section > Heading + Slides (widget Slideshow/Testimonial Carousel)
-// Solo useState local para el índice: en Elementor es el widget Slider sin código.
-import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { TESTIMONIALS } from "../data/content";
+// CLIENTES → Elementor: Section > Heading + 5 Cards (Icon Box).
+// Contenido real de giornata.es: "Trabajamos para museos, diócesis, instituciones,
+// profesionales y particulares. Nuestra trayectoria es nuestro mejor aval."
+import { Link } from "react-router-dom";
+import { CLIENTS } from "../data/content";
 import { Reveal, SectionTag } from "./ui";
 
+const ICONS = ["🏛", "⛪", "🏢", "🧰", "🏠"];
+
 export default function Testimonials() {
-  const [idx, setIdx] = useState(0);
-  const t = TESTIMONIALS[idx];
-
   return (
-    <section id="opiniones" className="bg-ochre/25 py-20 md:py-28 border-y border-ink/10">
-      <div className="max-w-[1100px] mx-auto px-5 md:px-10">
+    <section id="clientes" className="bg-ochre/25 py-20 md:py-28 border-y border-ink/10">
+      <div className="max-w-[1400px] mx-auto px-5 md:px-10">
         <Reveal>
-          <SectionTag index="04" label="Opiniones" />
+          <SectionTag index="04" label="Para quién trabajamos" />
         </Reveal>
-        <Reveal>
-          <h2 className="font-display font-light text-5xl md:text-6xl mt-8 tracking-tight">
-            Lo que dicen <em className="italic text-clay">las casas</em> que ya pasaron por el taller.
-          </h2>
-        </Reveal>
-
-        <div className="mt-10 bg-ink text-bone rounded-[28px] p-8 md:p-12 relative overflow-hidden min-h-[340px] flex flex-col justify-between">
-          <span aria-hidden className="absolute -top-6 left-6 font-display text-[160px] leading-none text-bone/10 select-none">“</span>
-          <AnimatePresence mode="wait">
-            <motion.figure
-              key={idx}
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -24 }}
-              transition={{ duration: 0.5 }}
-            >
-              <blockquote className="font-display font-light italic text-2xl md:text-4xl leading-tight max-w-3xl">
-                {t.quote}
-              </blockquote>
-              <figcaption className="mt-6">
-                <div className="font-medium">{t.name}</div>
-                <div className="text-bone/55 text-sm tracking-[0.18em] uppercase">{t.role}</div>
-              </figcaption>
-            </motion.figure>
-          </AnimatePresence>
-
-          <div className="flex items-center justify-between mt-10">
-            <div className="flex gap-2">
-              {TESTIMONIALS.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setIdx(i)}
-                  aria-label={`Ver opinión ${i + 1}`}
-                  className={`h-2 rounded-full transition-all duration-500 ${i === idx ? "w-10 bg-ochre" : "w-2 bg-bone/25 hover:bg-bone/50"}`}
-                />
-              ))}
-            </div>
-            <div className="flex gap-3">
-              <button
-                onClick={() => setIdx((idx - 1 + TESTIMONIALS.length) % TESTIMONIALS.length)}
-                className="w-12 h-12 rounded-full border border-bone/25 hover:bg-bone hover:text-ink transition-colors"
-                aria-label="Anterior"
-              >
-                ←
-              </button>
-              <button
-                onClick={() => setIdx((idx + 1) % TESTIMONIALS.length)}
-                className="w-12 h-12 rounded-full bg-clay hover:bg-ochre hover:text-ink transition-colors"
-                aria-label="Siguiente"
-              >
-                →
-              </button>
-            </div>
-          </div>
+        <div className="grid lg:grid-cols-12 gap-8 mt-8 items-end">
+          <Reveal className="lg:col-span-7">
+            <h2 className="font-display font-light text-5xl md:text-6xl tracking-tight">
+              Nuestra trayectoria es <em className="italic text-clay">nuestro mejor aval.</em>
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1} className="lg:col-span-5">
+            <p className="text-ink/65 leading-relaxed">
+              Más de 25 años restaurando para museos, diócesis, instituciones,
+              profesionales y particulares, en el taller y donde la obra lo requiera.
+            </p>
+          </Reveal>
         </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mt-10">
+          {CLIENTS.map((c, i) => (
+            <Reveal key={c} delay={i * 0.06}>
+              <div className="rounded-3xl bg-ink text-bone p-7 text-center hover:bg-clay transition-colors duration-500 h-full">
+                <div className="text-4xl">{ICONS[i % ICONS.length]}</div>
+                <div className="font-display text-xl md:text-2xl mt-3">{c}</div>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal>
+          <div className="mt-8 text-center">
+            <Link to="/contacto" className="link-line text-sm tracking-[0.2em] uppercase text-ink/60">
+              Cuéntanos tu proyecto →
+            </Link>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
